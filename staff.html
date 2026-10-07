@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cafélling Staff Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>file:///data/user/0/com.foxdebug.acodefree/files/public/staff.html
+
+    <header>
+        <h1>👨‍💼 Cafélling Staff Dashboard</h1>
+        <p>Order Monitoring</p>
+    </header>
+
+          <div class="order-monitor">
+    <h2>📋 Staff Order Monitor</h2>
+
+    <div id="staffOrders">
+        <p>No orders yet.</p>
+    </div>
+</div>
+
+
+<div class="menu-management">
+    <h2>⚙️ Menu Management</h2>
+
+    <input type="text" id="newItemName" placeholder="Item name">
+
+    <input type="number" id="newItemPrice" placeholder="Price">
+
+    <button onclick="addMenuItem()">
+        ➕ Add Menu Item
+    </button>
+
+    <div id="menuList"></div>
+</div>
+    </div>
+  <script>
+    let orders =
+        JSON.parse(localStorage.getItem("cafellingOrders")) || [];
+
+    let staffOrders =
+        document.getElementById("staffOrders");
+
+    if (orders.length === 0) {
+
+        staffOrders.innerHTML =
+            "<p>No orders yet.</p>";
+
+    } else {
+
+        staffOrders.innerHTML = "";
+
+        orders.forEach(function(order, index) {
+
+            staffOrders.innerHTML +=
+                "<hr>" +
+                "<h3>🧾 Order #" +
+                (index + 1) +
+                "</h3>" +
+
+                "<p><strong>Customer:</strong> " +
+                order.customer +
+                "</p>" +
+
+                "<p><strong>Quantity:</strong> " +
+                order.quantity +
+                "</p>" +
+
+                "<p><strong>Total:</strong> ₱" +
+                order.total +
+                "</p>" +
+
+                "<p>🟡 Status: " +
+                order.status +
+                "</p>" +
+
+                "<button onclick=\"startPreparing(" +
+                index +
+                ")\">" +
+
+                "Start Preparing" +
+
+                "</button>";
+        });
+    }
+
+    function startPreparing(index) {
+
+        let orders =
+            JSON.parse(localStorage.getItem("cafellingOrders")) || [];
+
+        orders[index].status = "Preparing";
+
+        localStorage.setItem(
+            "cafellingOrders",
+            JSON.stringify(orders)
+        );
+
+        location.reload();
+    }
+  </script>
+<div class="sales-report">
+    <h2>📊 Basic Sales Report</h2>
+
+    <p>
+        🧾 Total Orders:
+        <span id="totalOrders">0</span>
+    </p>
+
+    <p>
+        📦 Items Sold:
+        <span id="itemsSold">0</span>
+    </p>
+
+    <p>
+        💰 Total Sales:
+        ₱<span id="totalSales">0</span>
+    </p>
+</div>
+    <br>
+
+    <button onclick="window.location.href='index.html'">
+        ☕ Back to Customer Menu
+    </button>
+  <script>
+
+    let salesOrders =
+        JSON.parse(localStorage.getItem("cafellingOrders")) || [];
+
+    let reportTotalOrders = salesOrders.length;
+
+    let reportItemsSold = 0;
+
+    let reportTotalSales = 0;
+
+
+    salesOrders.forEach(function(order) {
+
+        reportItemsSold += order.quantity;
+
+        reportTotalSales += order.total;
+
+    });
+
+
+    document.getElementById("totalOrders").innerText =
+        reportTotalOrders;
+
+    document.getElementById("itemsSold").innerText =
+        reportItemsSold;
+
+    document.getElementById("totalSales").innerText =
+        reportTotalSales;
+
+  </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

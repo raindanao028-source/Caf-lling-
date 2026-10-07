@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<!DOCTYPE html>
+<html>
+  <head>
+    <title>Café Menu</title>
+    <link rel="stylesheet" href="style.css">
+
+    
+        
+</head>
+
+<body>
+
+    <header>
+        <h1>☕Cafélling</h1>
+        <p>Digital Café Menu</p>
+    </header>
+
+    <div class="category">
+        <h2>☕ Hot Coffee</h2>
+
+        <div class="item">
+        </div> <img src="https://www.coffeebeans.ph/storage/2023/07/americano-530x530.jpg" width="100" height="100" alt=""><h3>Americano</h3>
+            <p>Fresh brewed coffee</p>
+            <p class="price">₱80</p>
+            <button onclick="addToCart('Americano')">Add to Cart</button>
+        
+                <div class="item">
+           <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Fjsm2iwucf5EFHGGsi_8WHZ90NjFsqGGAZ1RlI3GoKrwWZR40YwfBUj3&s=10" width="100" height="100" alt="Spanish Latte"><h3>Spanish Latte</h3>
+            <p>Espresso with steamed milk</p>
+            <p class="price">₱90</p>
+            <button onclick="addToCart('Espresso')">Add to Cart</button>
+
+
+<label>
+    <input type="radio" name="sugar" value="No Sugar">
+    No Sugar
+</label>
+
+<label>
+    <input type="radio" name="sugar" value="Less Sugar">
+    Less Sugar
+</label>
+
+<label>
+    <input type="radio" name="sugar" value="Regular" checked>
+    Regular
+</label>
+
+<label>
+    <input type="radio" name="sugar" value="Extra Sugar">
+    Extra Sugar
+</label>
+          <p><strong>Milk:</strong></p>
+
+<label>
+    <input type="radio" name="milk" value="Regular" checked>
+    Regular
+</label>
+
+<label>
+    <input type="radio" name="milk" value="Oat Milk">
+    Oat Milk
+</label>
+
+<label>
+    <input type="radio" name="milk" value="Soy Milk">
+    Soy Milk
+</label>
+          <p>
+    <label>
+        <input type="checkbox" id="extraEspresso">
+        Extra Espresso (+₱20)
+    </label>
+          </p>
+          <button onclick="addCafeLatte()">
+    Add to Cart
+          </button>
+        
+        </div>
+    </div>
+
+    <div class="category">
+        <h2>🧊 Iced Drinks</h2>
+
+        <div class="item">
+           </div> <img src="https://www.browneyedbaker.com/wp-content/uploads/2021/06/iced-coffee-7-1200.jpg" width="100" height="100" alt="Iced Coffee"><h3>
+            <p>Cold coffee with ice</p>
+            <p class="price">₱85</p>
+            <button onclick="addToCart('Ice coffee')">Add to Cart</button>
+        </div>
+    </div>
+  <div class="category">
+    <h2>🥐 Bread & Pastries</h2>
+
+    <div class="item">
+    </div> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNxJURij5f6zIkBxfIOyrZZIpOa7FBcfWhs1SqiCtXnbiebLOZj58hiCE7&s=10" width="100" height="100" alt="Chocolate Croissant"></h3>
+        <p>Buttery croissant filled with chocolate</p>
+        <p class="price">₱75</p>
+        <button onclick="addToCart('Chocolate Croissant')">Add to Cart</button>
+    </div>
+
+    <div class="item">
+    </div> <img src="https://thenotsocreativecook.com/wp-content/uploads/2020/11/Filipino-Cheese-Bread-Rolls-2.jpg" width="100" height="100" alt="Cheesen Bread"></h3>
+        <p>Soft bread with melted cheese</p>
+        <p class="price">₱60</p>
+        <button onclick="addToCart('Cheese Bread')">Add to Cart</button>
+    </div>
+
+    <div class="item">
+    </div> <img src="https://www.kyleecooks.com/wp-content/uploads/2019/10/Homemade-Cinnamon-Rolls-SQ-5-500x500.jpg" width="100" height="100" alt="Cinnamon Roll"></h3>
+        <p>Soft roll with cinnamon and sugar</p>
+        <p class="price">₱70</p>
+        <button onclick="addToCart('Cinnamon Roll')">Add to Cart</button>
+    </div>
+  </div>
+<div class="cart">
+  <label for="customerName">Customer Name:</label>
+<input type="text" id="customerName" placeholder="Enter your name">
+    <h2>🛒 Shopping Cart</h2>
+  <div id="cartItems"></div>
+
+<p>Total: ₱<span id="cartTotal">0</span></p>
+  <button onclick="checkout()">Checkout</button>
+    <p id="cartMessage">Your cart is empty.</p>
+<p id="cartQuantity">Quantity: 0</p>
+
+  <button onclick="placeOrder()">Place Order</button>
+               <button onclick="clearCart()">🗑️ Clear Cart</button>                                
+  <div id="orderSummary"></div>
+  <hr>
+<hr>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

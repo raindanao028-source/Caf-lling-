@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5e6d3;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    background: #6f4e37;
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.category {
+    margin-top: 25px;
+}
+
+.category h2 {
+    color: #6f4e37;
+}
+
+.item {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.item h3 {
+    margin-top: 0;
+}
+
+.price {
+    font-weight: bold;
+    color: #6f4e37;
+}
+
+button {
+    background: #6f4e37;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+button:active {
+    background: #4b3425;
+}

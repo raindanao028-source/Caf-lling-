@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cafélling QR Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="script.js"></script>
+<body>
+<h2>Generate Table QR Code</h2>
+
+<input type="number" id="tableNumber" placeholder="Enter Table Number">
+
+<button onclick="generateQR()">Generate QR</button>
+
+<div id="qrcode"></div>
+  <button onclick="downloadQR()">📥 Download QR</button>
+    <button onclick="printQR()">🖨️ Print QR</button>
+  <header>
+        <h1>☕ Cafélling</h1>
+        <p>Scan to Open Digital Café Menu</p>
+    </header>
+
+    <div class="item" style="text-align: center; margin-top: 30px;">
+
+        <h2>📱 Cafélling QR Code</h2>
+
+        <p>Scan this QR code to open the Cafélling menu.</p>
+
+        <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fexample.com"
+            alt="Cafélling QR Code"
+        >
+
+        <p>
+            <strong>QR Menu</strong>
+        </p>
+
+        <br>
+
+        <button onclick="window.location.href='index.html'">
+            ☕ Open Café Menu
+        </button>
+
+    </div>
+
+</body>
+
+</html>
